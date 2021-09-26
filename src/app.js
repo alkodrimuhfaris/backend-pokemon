@@ -20,6 +20,6 @@ app.get('/', (req, res) => {
 const pokeRouter = require('./routers/pokemon');
 app.use('/', pokeRouter);
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`App listening on port ${port}`);
 });
