@@ -1,0 +1,36 @@
+{
+  "name": "backend-pokemon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alkodrimuhfaris/backend-pokemon.git"
+  },
+  "author": "esea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alkodrimuhfaris/backend-pokemon/issues"
+  },
+  "homepage": "https://github.com/alkodrimuhfaris/backend-pokemon#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-config-standard": "^16.0.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "prettier": "2.2.1",
+    "sequelize-cli": "^6.2.0"
+  }
+}
