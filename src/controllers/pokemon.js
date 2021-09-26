@@ -2,14 +2,17 @@ const responseStandard = require('../helpers/response');
 
 module.exports = {
   catch: (req, res) => {
-    const success = Math.random() < 0.5;
-    return responseStandard(res, null, {success});
+    const catched = Math.random() < 0.5;
+    return responseStandard(res, null, {catched});
   },
   relase: (req, res) => {
-    const number = Math.floor(Math.random() * 10001);
+    const number = Math.floor(Math.random() * 100001);
     let isPrime = true;
-    for (let i = 1; i < number; i++) {
-      isPrime = number / i !== 0;
+    for (let i = 2; i < number; i++) {
+      isPrime = number % i !== 0;
+      if (number === 0 || number === 1) {
+        isPrime = false;
+      }
       if (!isPrime) {
         break;
       }
@@ -19,7 +22,7 @@ module.exports = {
   changeName: (req, res) => {
     let {name, timeChange: nextChange} = req.body;
     nextChange = nextChange ? nextChange * 1 : 0;
-    console.log(nextChange);
+    console.log(name);
     const nameArr = name.split('-');
     const lastNum = nameArr[nameArr.length - 1];
     const fiboSeries = [0, 1, 1];

@@ -1,6 +1,5 @@
 /* eslint-disable no-unused-vars */
 const express = require('express');
-const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const response = require('./helpers/response');
@@ -8,7 +7,8 @@ const port = '8080';
 
 const app = express();
 
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.json());
+app.use(express.urlencoded());
 app.use(morgan('dev'));
 app.use(cors());
 
