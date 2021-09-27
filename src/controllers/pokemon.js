@@ -6,7 +6,7 @@ module.exports = {
     return responseStandard(res, null, {catched});
   },
   relase: (req, res) => {
-    const number = Math.floor(Math.random() * 100001);
+    const number = Math.floor(Math.random() * 101);
     let isPrime = true;
     for (let i = 2; i < number; i++) {
       isPrime = number % i !== 0;
